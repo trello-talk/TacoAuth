@@ -14,8 +14,8 @@ function validateEnv<T extends string = string>(key: keyof NodeJS.ProcessEnv, de
 
 export const config = {
   cookieName: 'token',
-  clientId: validateEnv('CLIENT_ID'),
-  clientSecret: validateEnv('CLIENT_SECRET'),
+  clientId: validateEnv('CLIENT_ID', '99999999999999'),
+  clientSecret: validateEnv('CLIENT_SECRET', '99999999999999'),
   appUri: validateEnv('APP_URI', 'http://localhost:3000'),
   jwtSecret: validateEnv('JWT_SECRET', 'this is a development value that should be changed in production!!!!!')
 } as const;
