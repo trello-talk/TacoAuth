@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                 Int      @id @default(autoincrement())
+  userID             String   @unique @db.VarChar(255)
+  bannedFromUse      Boolean  @default(false)
+  banReason          String?  @db.VarChar(255)
+  premiumTrelloToken String?  @db.VarChar(255)
+  trelloToken        String?  @db.VarChar(255)
+  trelloID           String?  @db.VarChar(255)
+  currentBoard       String?  @db.VarChar(255)
+  locale             String?  @db.VarChar(255)
+  prefixes           String[] @db.VarChar(255)
+  createdAt          DateTime @db.Timestamptz(6) @default(now())
+  updatedAt          DateTime @db.Timestamptz(6) @updatedAt
+  discordToken       String?  @db.VarChar(255)
+  discordRefresh     String?  @db.VarChar(255)
+
+  @@map("users")
+}
