@@ -1,14 +1,3 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      Object.assign(config.resolve.alias, {
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat'
-      });
-    }
+const withPreact = require('next-plugin-preact');
 
-    return config;
-  }
-};
+module.exports = withPreact({});

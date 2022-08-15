@@ -8,7 +8,7 @@ WORKDIR /build
 
 COPY package.json .
 COPY yarn.lock .
-RUN yarn install --immutable
+RUN yarn install --frozen-lockfile
 
 COPY . .
 RUN yarn generate
@@ -21,8 +21,8 @@ WORKDIR /deps
 
 COPY package.json .
 COPY yarn.lock .
-COPY /prisma .
-RUN yarn install --immutable --prod --ignore-optional
+COPY ./prisma .
+RUN yarn install --frozen-lockfile --prod --ignore-optional
 RUN yarn generate
 
 # ---- Runner ----
