@@ -36,6 +36,7 @@ COPY --from=builder /build/package.json ./package.json
 COPY --from=builder /build/yarn.lock ./yarn.lock
 COPY --from=deps /deps/node_modules ./node_modules
 COPY --from=builder /build/.next ./.next
+COPY --from=builder /build/public ./public
 
 USER node
 EXPOSE 8001
