@@ -22,7 +22,6 @@ WORKDIR /deps
 COPY package.json .
 COPY yarn.lock .
 RUN yarn install --immutable --prod --ignore-optional
-RUN yarn add -D prisma
 RUN yarn generate
 
 # ---- Runner ----
