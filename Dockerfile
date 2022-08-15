@@ -14,16 +14,6 @@ COPY . .
 RUN yarn generate
 RUN yarn build
 
-# ---- Dependencies ----
-FROM node:18-alpine AS deps
-
-WORKDIR /deps
-
-COPY package.json .
-COPY yarn.lock .
-RUN yarn install --immutable --prod --ignore-optional
-RUN yarn generate
-
 # ---- Runner ----
 FROM node:18-alpine
 
@@ -33,7 +23,7 @@ WORKDIR /app
 
 COPY --from=builder /build/package.json ./package.json
 COPY --from=builder /build/yarn.lock ./yarn.lock
-COPY --from=deps /deps/node_modules ./node_modules
+COPY --from=builder /build/node_modules ./node_modules
 COPY --from=builder /build/.next ./.next
 
 USER node
