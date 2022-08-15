@@ -11,6 +11,10 @@ on:
       - "Dockerfile"
       - "package.json"
       - "yarn.lock"
+    branches:
+      - 'master'
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 env:
