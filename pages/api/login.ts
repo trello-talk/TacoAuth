@@ -40,13 +40,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     method: 'POST',
     body
-  }).then((res) => res.json());
+  }).then((res) => res.json() as Promise<Record<string, string>>);
 
   if (!access_token || typeof access_token !== 'string') return res.redirect(OAUTH_URI);
 
-  const me: DiscordUser | { unauthorized: true } = await fetch('https://discord.com/api/users/@me', {
+  const me = await fetch('https://discord.com/api/users/@me', {
     headers: { Authorization: `${token_type} ${access_token}` }
-  }).then((res) => res.json());
+  }).then((res) => res.json() as Promise<DiscordUser | { unauthorized: true }>);
 
   if (!('id' in me)) return res.redirect(OAUTH_URI);
 
