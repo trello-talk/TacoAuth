@@ -29,7 +29,7 @@
     "jsonwebtoken": "8.5.1",
     "next": "12.2.5",
     "next-plugin-preact": "3.0.7",
-    "node-fetch": "2.6.7",
+    "node-fetch": "3.2.10",
     "oauth": "0.10.0",
     "postcss": "8.4.16",
     "preact": "10.10.2",
