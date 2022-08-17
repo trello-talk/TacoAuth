@@ -33,7 +33,7 @@
     "oauth": "0.10.0",
     "postcss": "8.4.16",
     "preact": "10.10.3",
-    "preact-render-to-string": "5.2.1",
+    "preact-render-to-string": "5.2.2",
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
     "react-ssr-prepass": "npm:preact-ssr-prepass",
