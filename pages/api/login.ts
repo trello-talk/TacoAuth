@@ -37,7 +37,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   }).toString();
 
   const { access_token = null, token_type = 'Bearer' } = await fetch('https://discord.com/api/oauth2/token', {
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'TacoAuth (https://github.com/trello-talk/TacoAuth, v1.0.0)' },
     method: 'POST',
     body
   }).then((res) => res.json() as Promise<Record<string, string>>);
@@ -45,7 +45,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (!access_token || typeof access_token !== 'string') return res.redirect(OAUTH_URI);
 
   const me = await fetch('https://discord.com/api/users/@me', {
-    headers: { Authorization: `${token_type} ${access_token}` }
+    headers: {
+      Authorization: `${token_type} ${access_token}`,
+      'User-Agent': 'TacoAuth (https://github.com/trello-talk/TacoAuth, v1.0.0)'
+    }
   }).then((res) => res.json() as Promise<DiscordUser | { unauthorized: true }>);
 
   if (!('id' in me)) return res.redirect(OAUTH_URI);
