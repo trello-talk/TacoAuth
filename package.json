@@ -32,7 +32,7 @@
     "node-fetch": "3.2.10",
     "oauth": "0.10.0",
     "postcss": "8.4.16",
-    "preact": "10.10.3",
+    "preact": "10.10.6",
     "preact-render-to-string": "5.2.2",
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
