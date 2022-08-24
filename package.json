@@ -25,7 +25,7 @@
     "clsx": "1.2.1",
     "cookie": "0.5.0",
     "cssnano": "5.1.13",
-    "ioredis": "5.2.2",
+    "ioredis": "5.2.3",
     "jsonwebtoken": "8.5.1",
     "next": "12.2.5",
     "next-plugin-preact": "3.0.7",
