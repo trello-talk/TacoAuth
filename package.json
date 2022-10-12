@@ -27,7 +27,7 @@
     "cssnano": "5.1.13",
     "ioredis": "5.2.3",
     "jsonwebtoken": "8.5.1",
-    "next": "12.2.5",
+    "next": "12.3.1",
     "next-plugin-preact": "3.0.7",
     "node-fetch": "3.2.10",
     "oauth": "0.10.0",
