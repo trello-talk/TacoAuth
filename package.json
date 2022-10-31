@@ -21,7 +21,7 @@
     "@fontsource/roboto": "4.5.8",
     "@headlessui/react": "1.7.3",
     "@prisma/client": "4.5.0",
-    "autoprefixer": "10.4.12",
+    "autoprefixer": "10.4.13",
     "clsx": "1.2.1",
     "cookie": "0.5.0",
     "cssnano": "5.1.14",
