@@ -19,7 +19,7 @@
     "@fontsource/lexend": "4.5.13",
     "@fontsource/red-hat-text": "4.5.11",
     "@fontsource/roboto": "4.5.8",
-    "@headlessui/react": "1.7.4",
+    "@headlessui/react": "1.7.5",
     "@prisma/client": "4.7.1",
     "autoprefixer": "10.4.13",
     "clsx": "1.2.1",
