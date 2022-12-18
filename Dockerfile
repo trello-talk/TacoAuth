@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # ---- Builder ----
-FROM node:18-alpine AS builder
+FROM --platform=$BUILDPLATFORM node:18-slim AS builder
 
 RUN mkdir /build
 WORKDIR /build
@@ -14,27 +14,16 @@ COPY . .
 RUN yarn generate
 RUN yarn build
 
-# ---- Dependencies ----
-FROM node:18-alpine AS deps
-
-WORKDIR /deps
-
-COPY package.json .
-COPY yarn.lock .
-COPY ./prisma .
-RUN yarn install --frozen-lockfile --prod --ignore-optional
-RUN yarn generate
-
 # ---- Runner ----
-FROM node:18-alpine
+FROM --platform=$BUILDPLATFORM node:18-slim
 
-RUN apk add dumb-init
+RUN apt-get update && apt-get install -y openssl dumb-init
 
 WORKDIR /app
 
 COPY --from=builder /build/package.json ./package.json
 COPY --from=builder /build/yarn.lock ./yarn.lock
-COPY --from=deps /deps/node_modules ./node_modules
+COPY --from=builder /build/node_modules ./node_modules
 COPY --chown=node:node --from=builder /build/.next ./.next
 COPY --chown=node:node --from=builder /build/public ./public
 COPY --from=builder /build/next.config.js ./
