@@ -1,29 +1,49 @@
 # syntax=docker/dockerfile:1
 
 # ---- Builder ----
-FROM --platform=$BUILDPLATFORM node:18-slim AS builder
+FROM --platform=$BUILDPLATFORM node:18-alpine3.16 AS builder
 
 RUN mkdir /build
 WORKDIR /build
 
 COPY package.json .
-COPY yarn.lock .
-RUN yarn install --frozen-lockfile
+COPY pnpm-lock.yaml .
+
+RUN apk add --update --no-cache git
+RUN npm install -g pnpm@7
+
+RUN pnpm install --frozen-lockfile
 
 COPY . .
-RUN yarn generate
-RUN yarn build
+RUN pnpm run generate
+RUN pnpm run build
+
+# ---- Dependencies ----
+FROM --platform=$BUILDPLATFORM node:18-alpine3.16 AS deps
+
+WORKDIR /deps
+
+COPY package.json .
+COPY pnpm-lock.yaml .
+COPY ./prisma .
+
+RUN apk add --update --no-cache git
+RUN npm install -g pnpm@7
+
+RUN pnpm install --frozen-lockfile --prod --no-optional
+RUN pnpm dlx prisma generate
 
 # ---- Runner ----
-FROM --platform=$BUILDPLATFORM node:18-slim
+FROM --platform=$BUILDPLATFORM node:18-alpine3.16
 
-RUN apt-get update && apt-get install -y openssl dumb-init
+RUN apk add --update --no-cache dumb-init git
+RUN npm install -g pnpm@7
 
 WORKDIR /app
 
 COPY --from=builder /build/package.json ./package.json
-COPY --from=builder /build/yarn.lock ./yarn.lock
-COPY --from=builder /build/node_modules ./node_modules
+COPY --from=builder /build/pnpm-lock.yaml ./pnpm-lock.yaml
+COPY --chown=node:node --from=deps /deps/node_modules ./node_modules
 COPY --chown=node:node --from=builder /build/.next ./.next
 COPY --chown=node:node --from=builder /build/public ./public
 COPY --from=builder /build/next.config.js ./
@@ -34,4 +54,4 @@ ENV PORT=8001
 ENV NODE_ENV production
 
 ENTRYPOINT ["dumb-init", "--"]
-CMD ["sh", "-c", "yarn start"]
+CMD ["sh", "-c", "pnpm run start"]
