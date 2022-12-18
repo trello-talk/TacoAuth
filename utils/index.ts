@@ -1,6 +1,7 @@
+import { IncomingMessage } from 'node:http';
+
 import { parse } from 'cookie';
 import { verify } from 'jsonwebtoken';
-import { IncomingMessage } from 'node:http';
 
 import { config } from './config';
 import { DiscordUser } from './types';
