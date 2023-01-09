@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@fontsource/lexend': 4.5.13
+  '@fontsource/lexend': 4.5.14
   '@fontsource/red-hat-text': 4.5.11
   '@fontsource/roboto': 4.5.8
   '@headlessui/react': 1.7.7
@@ -37,7 +37,7 @@ specifiers:
   typescript: 4.9.4
 
 dependencies:
-  '@fontsource/lexend': 4.5.13
+  '@fontsource/lexend': 4.5.14
   '@fontsource/red-hat-text': 4.5.11
   '@fontsource/roboto': 4.5.8
   '@headlessui/react': 1.7.7_ive3jjn476xyi3ikfsqwmh5x74
@@ -93,8 +93,8 @@ packages:
       - supports-color
     dev: true
 
-  /@fontsource/lexend/4.5.13:
-    resolution: {integrity: sha512-lJjBMU9Jmi2a/QqLRBhwe862385UyS2RckS3ATr8jHAq1JFLxox2p2gODNzhaWo0ZwTjDxIJ0YfMiEzSdyqZ0w==}
+  /@fontsource/lexend/4.5.14:
+    resolution: {integrity: sha512-6ctm23JzSITVKi6Kjnw5chfE5rZLUa50DpFbXHQlgjrwNtdvEg1mH6JYLQAZM4VtMmg2JfiSQyoCvePGvvhTVg==}
     dev: false
 
   /@fontsource/red-hat-text/4.5.11:
