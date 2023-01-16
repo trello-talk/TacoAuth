@@ -18,7 +18,7 @@ specifiers:
   cssnano: 5.1.14
   eslint: 8.32.0
   eslint-config-snazzah: 1.2.1
-  ioredis: 5.2.4
+  ioredis: 5.2.5
   jsonwebtoken: 8.5.1
   next: 12.3.4
   next-plugin-preact: 3.0.7
@@ -46,7 +46,7 @@ dependencies:
   clsx: 1.2.1
   cookie: 0.5.0
   cssnano: 5.1.14_postcss@8.4.21
-  ioredis: 5.2.4
+  ioredis: 5.2.5
   jsonwebtoken: 8.5.1
   next: 12.3.4_c2vlk4jujkru5n3l3ghzjb6cze
   next-plugin-preact: 3.0.7_joico5dtdtsqcwqgabkjgahqwu
@@ -1674,8 +1674,8 @@ packages:
       side-channel: 1.0.4
     dev: true
 
-  /ioredis/5.2.4:
-    resolution: {integrity: sha512-qIpuAEt32lZJQ0XyrloCRdlEdUUNGG9i0UOk6zgzK6igyudNWqEBxfH6OlbnOOoBBvr1WB02mm8fR55CnikRng==}
+  /ioredis/5.2.5:
+    resolution: {integrity: sha512-7HKo/ClM2DGLRXdFq8ruS3Uuadensz4A76wPOU0adqlOqd1qkhoLPDaBhmVhUhNGpB+J65/bhLmNB8DDY99HJQ==}
     engines: {node: '>=12.22.0'}
     dependencies:
       '@ioredis/commands': 1.2.0
