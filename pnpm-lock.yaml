@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@fontsource/lexend': 4.5.14
-  '@fontsource/red-hat-text': 4.5.11
+  '@fontsource/lexend': 4.5.15
+  '@fontsource/red-hat-text': 4.5.12
   '@fontsource/roboto': 4.5.8
   '@headlessui/react': 1.7.7
   '@prisma/client': 4.8.1
@@ -37,8 +37,8 @@ specifiers:
   typescript: 4.9.4
 
 dependencies:
-  '@fontsource/lexend': 4.5.14
-  '@fontsource/red-hat-text': 4.5.11
+  '@fontsource/lexend': 4.5.15
+  '@fontsource/red-hat-text': 4.5.12
   '@fontsource/roboto': 4.5.8
   '@headlessui/react': 1.7.7_ive3jjn476xyi3ikfsqwmh5x74
   '@prisma/client': 4.8.1_prisma@4.8.1
@@ -93,12 +93,12 @@ packages:
       - supports-color
     dev: true
 
-  /@fontsource/lexend/4.5.14:
-    resolution: {integrity: sha512-6ctm23JzSITVKi6Kjnw5chfE5rZLUa50DpFbXHQlgjrwNtdvEg1mH6JYLQAZM4VtMmg2JfiSQyoCvePGvvhTVg==}
+  /@fontsource/lexend/4.5.15:
+    resolution: {integrity: sha512-6edLmDmte8pJWtQ1NIahcJq0iWlf6b0/JLwkd7WbDQ3C5tZWnxjvbP4RSklMv4MPzGjpuYuYnc+QANbjUws1oA==}
     dev: false
 
-  /@fontsource/red-hat-text/4.5.11:
-    resolution: {integrity: sha512-ByHJTIMMQ2X53YTKao629pJqsNkSkAnxhzMtitFOKw+PaSB5vOBzEjpxLww8Ykr4Z5xA5N3o+YMK0bdJgrJ5Cg==}
+  /@fontsource/red-hat-text/4.5.12:
+    resolution: {integrity: sha512-404lUG4USsR9s0kmMAPmistREqXETYShCH7AhCNDe+6xEGZraaDatsbjr0zbI/4zd2Oxz/s+n3Q2miDDVsQSFA==}
     dev: false
 
   /@fontsource/roboto/4.5.8:
