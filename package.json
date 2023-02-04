@@ -16,8 +16,8 @@
     "generate": "prisma generate"
   },
   "dependencies": {
-    "@fontsource/lexend": "4.5.14",
-    "@fontsource/red-hat-text": "4.5.11",
+    "@fontsource/lexend": "4.5.15",
+    "@fontsource/red-hat-text": "4.5.12",
     "@fontsource/roboto": "4.5.8",
     "@headlessui/react": "1.7.9",
     "@prisma/client": "4.9.0",
