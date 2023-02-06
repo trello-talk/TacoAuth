@@ -32,7 +32,7 @@ specifiers:
   react-dom: npm:@preact/compat
   react-ssr-prepass: npm:preact-ssr-prepass
   react-tippy: 1.4.0
-  sass: 1.57.1
+  sass: 1.58.0
   tailwindcss: 3.2.4
   typescript: 4.9.5
 
@@ -48,7 +48,7 @@ dependencies:
   cssnano: 5.1.14_postcss@8.4.21
   ioredis: 5.3.0
   jsonwebtoken: 9.0.0
-  next: 12.3.4_c2vlk4jujkru5n3l3ghzjb6cze
+  next: 12.3.4_zoe65xm3h3rns5upngh2cmhitu
   next-plugin-preact: 3.0.7_joico5dtdtsqcwqgabkjgahqwu
   node-fetch: 3.3.0
   oauth: 0.10.0
@@ -59,7 +59,7 @@ dependencies:
   react-dom: /@preact/compat/17.1.2_preact@10.11.3
   react-ssr-prepass: /preact-ssr-prepass/1.2.0_preact@10.11.3
   react-tippy: 1.4.0
-  sass: 1.57.1
+  sass: 1.58.0
   tailwindcss: 3.2.4_postcss@8.4.21
 
 devDependencies:
@@ -311,7 +311,7 @@ packages:
       '@prefresh/core': 1.4.1_preact@10.11.3
       '@prefresh/utils': 1.1.3
       '@prefresh/webpack': 3.3.4_skxee3v5efkjjkvxx66v3k7kva
-      next: 12.3.4_c2vlk4jujkru5n3l3ghzjb6cze
+      next: 12.3.4_zoe65xm3h3rns5upngh2cmhitu
       preact: 10.11.3
     dev: false
 
@@ -2042,7 +2042,7 @@ packages:
       - webpack
     dev: false
 
-  /next/12.3.4_c2vlk4jujkru5n3l3ghzjb6cze:
+  /next/12.3.4_zoe65xm3h3rns5upngh2cmhitu:
     resolution: {integrity: sha512-VcyMJUtLZBGzLKo3oMxrEF0stxh8HwuW976pAzlHhI3t8qJ4SROjCrSh1T24bhrbjw55wfZXAbXPGwPt5FLRfQ==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -2066,7 +2066,7 @@ packages:
       postcss: 8.4.14
       react: /@preact/compat/17.1.2_preact@10.11.3
       react-dom: /@preact/compat/17.1.2_preact@10.11.3
-      sass: 1.57.1
+      sass: 1.58.0
       styled-jsx: 5.0.7_@preact+compat@17.1.2
       use-sync-external-store: 1.2.0_@preact+compat@17.1.2
     optionalDependencies:
@@ -2755,8 +2755,8 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /sass/1.57.1:
-    resolution: {integrity: sha512-O2+LwLS79op7GI0xZ8fqzF7X2m/m8WFfI02dHOdsK5R2ECeS5F62zrwg/relM1rjSLy7Vd/DiMNIvPrQGsA0jw==}
+  /sass/1.58.0:
+    resolution: {integrity: sha512-PiMJcP33DdKtZ/1jSjjqVIKihoDc6yWmYr9K/4r3fVVIEDAluD0q7XZiRKrNJcPK3qkLRF/79DND1H5q1LBjgg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
