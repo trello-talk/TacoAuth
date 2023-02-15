@@ -50,7 +50,7 @@
     "@types/node": "18.13.0",
     "@types/node-fetch": "2.6.2",
     "@types/oauth": "0.9.1",
-    "@types/react": "18.0.27",
+    "@types/react": "18.0.28",
     "eslint": "8.33.0",
     "eslint-config-snazzah": "1.2.1",
     "prisma": "4.9.0",
