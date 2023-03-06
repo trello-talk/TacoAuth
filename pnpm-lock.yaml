@@ -8,7 +8,7 @@ specifiers:
   '@prisma/client': 4.9.0
   '@types/cookie': 0.5.1
   '@types/jsonwebtoken': 9.0.1
-  '@types/node': 18.14.2
+  '@types/node': 18.14.6
   '@types/node-fetch': 2.6.2
   '@types/oauth': 0.9.1
   '@types/react': 18.0.28
@@ -65,7 +65,7 @@ dependencies:
 devDependencies:
   '@types/cookie': 0.5.1
   '@types/jsonwebtoken': 9.0.1
-  '@types/node': 18.14.2
+  '@types/node': 18.14.6
   '@types/node-fetch': 2.6.2
   '@types/oauth': 0.9.1
   '@types/react': 18.0.28
@@ -397,24 +397,24 @@ packages:
   /@types/jsonwebtoken/9.0.1:
     resolution: {integrity: sha512-c5ltxazpWabia/4UzhIoaDcIza4KViOQhdbjRlfcIGVnsE3c3brkz9Z+F/EeJIECOQP7W7US2hNE930cWWkPiw==}
     dependencies:
-      '@types/node': 18.14.2
+      '@types/node': 18.14.6
     dev: true
 
   /@types/node-fetch/2.6.2:
     resolution: {integrity: sha512-DHqhlq5jeESLy19TYhLakJ07kNumXWjcDdxXsLUMJZ6ue8VZJj4kLPQVE/2mdHh3xZziNF1xppu5lwmS53HR+A==}
     dependencies:
-      '@types/node': 18.14.2
+      '@types/node': 18.14.6
       form-data: 3.0.1
     dev: true
 
-  /@types/node/18.14.2:
-    resolution: {integrity: sha512-1uEQxww3DaghA0RxqHx0O0ppVlo43pJhepY51OxuQIKHpjbnYLA7vcdwioNPzIqmC2u3I/dmylcqjlh0e7AyUA==}
+  /@types/node/18.14.6:
+    resolution: {integrity: sha512-93+VvleD3mXwlLI/xASjw0FzKcwzl3OdTCzm1LaRfqgS21gfFtK3zDXM5Op9TeeMsJVOaJ2VRDpT9q4Y3d0AvA==}
     dev: true
 
   /@types/oauth/0.9.1:
     resolution: {integrity: sha512-a1iY62/a3yhZ7qH7cNUsxoI3U/0Fe9+RnuFrpTKr+0WVOzbKlSLojShCKe20aOD1Sppv+i8Zlq0pLDuTJnwS4A==}
     dependencies:
-      '@types/node': 18.14.2
+      '@types/node': 18.14.6
     dev: true
 
   /@types/prop-types/15.7.5:
