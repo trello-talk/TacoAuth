@@ -4,7 +4,7 @@ specifiers:
   '@fontsource/lexend': 4.5.15
   '@fontsource/red-hat-text': 4.5.12
   '@fontsource/roboto': 4.5.8
-  '@headlessui/react': 1.7.12
+  '@headlessui/react': 1.7.13
   '@prisma/client': 4.11.0
   '@types/cookie': 0.5.1
   '@types/jsonwebtoken': 9.0.1
@@ -40,7 +40,7 @@ dependencies:
   '@fontsource/lexend': 4.5.15
   '@fontsource/red-hat-text': 4.5.12
   '@fontsource/roboto': 4.5.8
-  '@headlessui/react': 1.7.12_ive3jjn476xyi3ikfsqwmh5x74
+  '@headlessui/react': 1.7.13_ive3jjn476xyi3ikfsqwmh5x74
   '@prisma/client': 4.11.0_prisma@4.11.0
   autoprefixer: 10.4.13_postcss@8.4.21
   clsx: 1.2.1
@@ -110,8 +110,8 @@ packages:
     resolution: {integrity: sha512-CnD7zLItIzt86q4Sj3kZUiLcBk1dSk81qcqgMGaZe7SQ1P8hFNxhMl5AZthK1zrDM5m74VVhaOpuMGIL4gagaA==}
     dev: false
 
-  /@headlessui/react/1.7.12_ive3jjn476xyi3ikfsqwmh5x74:
-    resolution: {integrity: sha512-FhSx5V+Qp0GvbTpaxyS+ymGDDNntCacClWsk/d8Upbr19g3AsPbjfPk4+m2CgJGcuCB5Dz7LpUIOAbvQTyjL2g==}
+  /@headlessui/react/1.7.13_ive3jjn476xyi3ikfsqwmh5x74:
+    resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
