@@ -12,7 +12,7 @@ specifiers:
   '@types/node-fetch': 2.6.2
   '@types/oauth': 0.9.1
   '@types/react': 18.0.28
-  autoprefixer: 10.4.13
+  autoprefixer: 10.4.14
   clsx: 1.2.1
   cookie: 0.5.0
   cssnano: 5.1.15
@@ -42,7 +42,7 @@ dependencies:
   '@fontsource/roboto': 4.5.8
   '@headlessui/react': 1.7.13_ive3jjn476xyi3ikfsqwmh5x74
   '@prisma/client': 4.11.0_prisma@4.11.0
-  autoprefixer: 10.4.13_postcss@8.4.21
+  autoprefixer: 10.4.14_postcss@8.4.21
   clsx: 1.2.1
   cookie: 0.5.0
   cssnano: 5.1.15_postcss@8.4.21
@@ -684,8 +684,8 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: true
 
-  /autoprefixer/10.4.13_postcss@8.4.21:
-    resolution: {integrity: sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==}
+  /autoprefixer/10.4.14_postcss@8.4.21:
+    resolution: {integrity: sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
