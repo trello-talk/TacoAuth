@@ -11,7 +11,7 @@ specifiers:
   '@types/node': 18.15.3
   '@types/node-fetch': 2.6.2
   '@types/oauth': 0.9.1
-  '@types/react': 18.0.28
+  '@types/react': 18.0.30
   autoprefixer: 10.4.14
   clsx: 1.2.1
   cookie: 0.5.0
@@ -49,7 +49,7 @@ dependencies:
   ioredis: 5.3.1
   jsonwebtoken: 9.0.0
   next: 12.3.4_k3rawuct3cf7tuefkvzoepsx3u
-  next-plugin-preact: 3.0.7_khwqnomrglcixbk4qzvorh6mgm
+  next-plugin-preact: 3.0.7_kmsqz55xlxfoeqoqiyx7jfnemu
   node-fetch: 3.3.1
   oauth: 0.10.0
   postcss: 8.4.21
@@ -68,7 +68,7 @@ devDependencies:
   '@types/node': 18.15.3
   '@types/node-fetch': 2.6.2
   '@types/oauth': 0.9.1
-  '@types/react': 18.0.28
+  '@types/react': 18.0.30
   eslint: 8.36.0
   eslint-config-snazzah: 1.2.1_typescript@4.9.5
   prisma: 4.11.0
@@ -436,8 +436,8 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react/18.0.28:
-    resolution: {integrity: sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==}
+  /@types/react/18.0.30:
+    resolution: {integrity: sha512-AnME2cHDH11Pxt/yYX6r0w448BfTwQOLEhQEjCdwB7QskEI7EKtxhGUsExTQe/MsY3D9D5rMtu62WRocw9A8FA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -2053,7 +2053,7 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-plugin-preact/3.0.7_khwqnomrglcixbk4qzvorh6mgm:
+  /next-plugin-preact/3.0.7_kmsqz55xlxfoeqoqiyx7jfnemu:
     resolution: {integrity: sha512-8Xl+SJT3FCZHS7R/6Gana6e95o09UpiyCsK0cw8P/KW2M+lQcYIwIt4ZLZd+K9TW3JZx6KJDLqVbq0Kd6KZsIg==}
     requiresBuild: true
     peerDependencies:
@@ -2066,6 +2066,7 @@ packages:
       module-alias: 2.2.2
       preact: 10.13.1
       preact-render-to-string: 5.2.6_preact@10.13.1
+      preact-ssr-prepass: 1.2.0_preact@10.13.1
     transitivePeerDependencies:
       - '@prefresh/babel-plugin'
       - next
