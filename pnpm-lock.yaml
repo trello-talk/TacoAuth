@@ -11,8 +11,8 @@ dependencies:
     specifier: 4.5.8
     version: 4.5.8
   '@headlessui/react':
-    specifier: 1.7.13
-    version: 1.7.13(@preact/compat@17.1.2)(@preact/compat@17.1.2)
+    specifier: 1.7.14
+    version: 1.7.14(@preact/compat@17.1.2)(@preact/compat@17.1.2)
   '@prisma/client':
     specifier: 4.12.0
     version: 4.12.0(prisma@4.12.0)
@@ -157,8 +157,8 @@ packages:
     resolution: {integrity: sha512-CnD7zLItIzt86q4Sj3kZUiLcBk1dSk81qcqgMGaZe7SQ1P8hFNxhMl5AZthK1zrDM5m74VVhaOpuMGIL4gagaA==}
     dev: false
 
-  /@headlessui/react@1.7.13(@preact/compat@17.1.2)(@preact/compat@17.1.2):
-    resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
+  /@headlessui/react@1.7.14(@preact/compat@17.1.2)(@preact/compat@17.1.2):
+    resolution: {integrity: sha512-znzdq9PG8rkwcu9oQ2FwIy0ZFtP9Z7ycS+BAqJ3R5EIqC/0bJGvhT7193rFf+45i9nnPsYvCQVW4V/bB9Xc+gA==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
