@@ -38,7 +38,7 @@
     "react-dom": "npm:@preact/compat",
     "react-ssr-prepass": "npm:preact-ssr-prepass",
     "react-tippy": "1.4.0",
-    "sass": "1.62.0",
+    "sass": "1.62.1",
     "tailwindcss": "3.3.2"
   },
   "peerDependencies": {
