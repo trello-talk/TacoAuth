@@ -5,8 +5,8 @@ dependencies:
     specifier: 5.0.1
     version: 5.0.1
   '@fontsource/red-hat-text':
-    specifier: 4.5.12
-    version: 4.5.12
+    specifier: 5.0.1
+    version: 5.0.1
   '@fontsource/roboto':
     specifier: 4.5.8
     version: 4.5.8
@@ -154,8 +154,8 @@ packages:
     resolution: {integrity: sha512-klJkXKicZZQ0uaZcNEaTXyf5QZbqwq2tEQxKNsCeDXMLAOA1iNNjzbPW1dGsj7vdQtug2CT7E9qzL2JEiA6xyg==}
     dev: false
 
-  /@fontsource/red-hat-text@4.5.12:
-    resolution: {integrity: sha512-404lUG4USsR9s0kmMAPmistREqXETYShCH7AhCNDe+6xEGZraaDatsbjr0zbI/4zd2Oxz/s+n3Q2miDDVsQSFA==}
+  /@fontsource/red-hat-text@5.0.1:
+    resolution: {integrity: sha512-M9E61Lug0LjTW1F1f5a9QGVKSSsqKQtA+URO7/LtR92HpNsB/2aAOXbyeJ0dPXy59uHkKOwBVjmjZfXWVtOstQ==}
     dev: false
 
   /@fontsource/roboto@4.5.8:
