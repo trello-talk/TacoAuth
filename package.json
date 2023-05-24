@@ -48,7 +48,7 @@
     "@types/cookie": "0.5.1",
     "@types/jsonwebtoken": "9.0.2",
     "@types/node": "18.16.14",
-    "@types/node-fetch": "2.6.3",
+    "@types/node-fetch": "2.6.4",
     "@types/oauth": "0.9.1",
     "@types/react": "18.2.6",
     "eslint": "8.41.0",
