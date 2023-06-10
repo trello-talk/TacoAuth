@@ -1,12 +1,16 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 dependencies:
   '@fontsource/lexend':
     specifier: 5.0.1
     version: 5.0.1
   '@fontsource/red-hat-text':
-    specifier: 5.0.1
-    version: 5.0.1
+    specifier: 5.0.3
+    version: 5.0.3
   '@fontsource/roboto':
     specifier: 4.5.8
     version: 4.5.8
@@ -154,8 +158,8 @@ packages:
     resolution: {integrity: sha512-klJkXKicZZQ0uaZcNEaTXyf5QZbqwq2tEQxKNsCeDXMLAOA1iNNjzbPW1dGsj7vdQtug2CT7E9qzL2JEiA6xyg==}
     dev: false
 
-  /@fontsource/red-hat-text@5.0.1:
-    resolution: {integrity: sha512-M9E61Lug0LjTW1F1f5a9QGVKSSsqKQtA+URO7/LtR92HpNsB/2aAOXbyeJ0dPXy59uHkKOwBVjmjZfXWVtOstQ==}
+  /@fontsource/red-hat-text@5.0.3:
+    resolution: {integrity: sha512-HYbE73/s4wt0sSr28N9uo8l0gygnxNuH1HaHEVHWRrosHXW+HMbdh7DdyikLhzAL4qgpl8hIN1Go17MXMcQgdw==}
     dev: false
 
   /@fontsource/roboto@4.5.8:

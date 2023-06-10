@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@fontsource/lexend": "5.0.1",
-    "@fontsource/red-hat-text": "5.0.1",
+    "@fontsource/red-hat-text": "5.0.3",
     "@fontsource/roboto": "4.5.8",
     "@headlessui/react": "1.7.14",
     "@prisma/client": "4.14.1",
