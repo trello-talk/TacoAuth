@@ -86,8 +86,8 @@ devDependencies:
     specifier: 9.0.2
     version: 9.0.2
   '@types/node':
-    specifier: 18.16.14
-    version: 18.16.14
+    specifier: 18.16.18
+    version: 18.16.18
   '@types/node-fetch':
     specifier: 2.6.4
     version: 2.6.4
@@ -519,23 +519,23 @@ packages:
   /@types/jsonwebtoken@9.0.2:
     resolution: {integrity: sha512-drE6uz7QBKq1fYqqoFKTDRdFCPHd5TCub75BM+D+cMx7NU9hUz7SESLfC2fSCXVFMO5Yj8sOWHuGqPgjc+fz0Q==}
     dependencies:
-      '@types/node': 18.16.14
+      '@types/node': 18.16.18
     dev: true
 
   /@types/node-fetch@2.6.4:
     resolution: {integrity: sha512-1ZX9fcN4Rvkvgv4E6PAY5WXUFWFcRWxZa3EW83UjycOB9ljJCedb2CupIP4RZMEwF/M3eTcCihbBRgwtGbg5Rg==}
     dependencies:
-      '@types/node': 18.16.14
+      '@types/node': 18.16.18
       form-data: 3.0.1
     dev: true
 
-  /@types/node@18.16.14:
-    resolution: {integrity: sha512-+ImzUB3mw2c5ISJUq0punjDilUQ5GnUim0ZRvchHIWJmOC0G+p0kzhXBqj6cDjK0QdPFwzrHWgrJp3RPvCG5qg==}
+  /@types/node@18.16.18:
+    resolution: {integrity: sha512-/aNaQZD0+iSBAGnvvN2Cx92HqE5sZCPZtx2TsK+4nvV23fFe09jVDvpArXr2j9DnYlzuU9WuoykDDc6wqvpNcw==}
 
   /@types/oauth@0.9.1:
     resolution: {integrity: sha512-a1iY62/a3yhZ7qH7cNUsxoI3U/0Fe9+RnuFrpTKr+0WVOzbKlSLojShCKe20aOD1Sppv+i8Zlq0pLDuTJnwS4A==}
     dependencies:
-      '@types/node': 18.16.14
+      '@types/node': 18.16.18
     dev: true
 
   /@types/prop-types@15.7.5:
@@ -2137,7 +2137,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 18.16.14
+      '@types/node': 18.16.18
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: false
