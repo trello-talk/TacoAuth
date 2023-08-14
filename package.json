@@ -47,7 +47,7 @@
   "devDependencies": {
     "@types/cookie": "0.5.1",
     "@types/jsonwebtoken": "9.0.2",
-    "@types/node": "18.17.4",
+    "@types/node": "18.17.5",
     "@types/node-fetch": "2.6.4",
     "@types/oauth": "0.9.1",
     "@types/react": "18.2.18",
