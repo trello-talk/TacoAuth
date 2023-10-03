@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@fontsource/lexend':
+    specifier: 5.0.14
+    version: 5.0.14
+  '@fontsource/red-hat-text':
     specifier: 5.0.12
     version: 5.0.12
-  '@fontsource/red-hat-text':
-    specifier: 5.0.8
-    version: 5.0.8
   '@fontsource/roboto':
     specifier: 4.5.8
     version: 4.5.8
@@ -159,12 +159,12 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fontsource/lexend@5.0.12:
-    resolution: {integrity: sha512-UYeg7ob8WAr+ZIlkACIGvCcGx9yhcWPTKU8JtX7QLYtkrO628L8qRIjHmM2g8l4wmM2QHwWQMhmh01qSnB2aYw==}
+  /@fontsource/lexend@5.0.14:
+    resolution: {integrity: sha512-bjvKAWaV6STkMNa5ITQP+F1BSO5vNCfbhfJ0XWHSFFC50+JfElZywarmiaUDtsZSRP8qxadxmIr/j1ByDt/aqQ==}
     dev: false
 
-  /@fontsource/red-hat-text@5.0.8:
-    resolution: {integrity: sha512-0yvKruZ5BrJ8aNHm5r3qF2PIalPGykNh80UB/Roa8m93VJW0t0TcOYaXQVvyC/pXlt1z653rsBjhYJ8OViATOA==}
+  /@fontsource/red-hat-text@5.0.12:
+    resolution: {integrity: sha512-ybiORZkCN4ylRw/PzdnldffLFVJ4aZedwlSelh0SKUX6sdViNiRykYzxto3rax2vOhfHNlvdamiB2iYGPh/n0w==}
     dev: false
 
   /@fontsource/roboto@4.5.8:
