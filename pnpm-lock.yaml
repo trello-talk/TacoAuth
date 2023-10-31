@@ -80,8 +80,8 @@ dependencies:
 
 devDependencies:
   '@types/cookie':
-    specifier: 0.5.2
-    version: 0.5.2
+    specifier: 0.5.3
+    version: 0.5.3
   '@types/jsonwebtoken':
     specifier: 9.0.4
     version: 9.0.4
@@ -488,8 +488,8 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: false
 
-  /@types/cookie@0.5.2:
-    resolution: {integrity: sha512-DBpRoJGKJZn7RY92dPrgoMew8xCWc2P71beqsjyhEI/Ds9mOyVmBwtekyfhpwFIVt1WrxTonFifiOZ62V8CnNA==}
+  /@types/cookie@0.5.3:
+    resolution: {integrity: sha512-SLg07AS9z1Ab2LU+QxzU8RCmzsja80ywjf/t5oqw+4NSH20gIGlhLOrBDm1L3PBWzPa4+wkgFQVZAjE6Ioj2ug==}
     dev: true
 
   /@types/eslint-scope@3.7.4:
