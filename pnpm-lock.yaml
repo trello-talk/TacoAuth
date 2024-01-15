@@ -15,8 +15,8 @@ dependencies:
     specifier: 4.5.8
     version: 4.5.8
   '@headlessui/react':
-    specifier: 1.7.17
-    version: 1.7.17(@preact/compat@17.1.2)(@preact/compat@17.1.2)
+    specifier: 1.7.18
+    version: 1.7.18(@preact/compat@17.1.2)(@preact/compat@17.1.2)
   '@prisma/client':
     specifier: 4.14.1
     version: 4.14.1(prisma@4.14.1)
@@ -171,13 +171,14 @@ packages:
     resolution: {integrity: sha512-CnD7zLItIzt86q4Sj3kZUiLcBk1dSk81qcqgMGaZe7SQ1P8hFNxhMl5AZthK1zrDM5m74VVhaOpuMGIL4gagaA==}
     dev: false
 
-  /@headlessui/react@1.7.17(@preact/compat@17.1.2)(@preact/compat@17.1.2):
-    resolution: {integrity: sha512-4am+tzvkqDSSgiwrsEpGWqgGo9dz8qU5M3znCkC4PgkpY4HcCZzEDEvozltGGGHIKl9jbXbZPSH5TWn4sWJdow==}
+  /@headlessui/react@1.7.18(@preact/compat@17.1.2)(@preact/compat@17.1.2):
+    resolution: {integrity: sha512-4i5DOrzwN4qSgNsL4Si61VMkUcWbcSKueUV7sFhpHzQcSShdlHENE5+QBntMSRvHt8NyoFO2AGG8si9lq+w4zQ==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
       react-dom: ^16 || ^17 || ^18
     dependencies:
+      '@tanstack/react-virtual': 3.0.1(@preact/compat@17.1.2)(@preact/compat@17.1.2)
       client-only: 0.0.1
       react: /@preact/compat@17.1.2(preact@10.16.0)
       react-dom: /@preact/compat@17.1.2(preact@10.16.0)
@@ -500,6 +501,21 @@ packages:
     resolution: {integrity: sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw==}
     dependencies:
       tslib: 2.6.2
+    dev: false
+
+  /@tanstack/react-virtual@3.0.1(@preact/compat@17.1.2)(@preact/compat@17.1.2):
+    resolution: {integrity: sha512-IFOFuRUTaiM/yibty9qQ9BfycQnYXIDHGP2+cU+0LrFFGNhVxCXSQnaY6wkX8uJVteFEBjUondX0Hmpp7TNcag==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@tanstack/virtual-core': 3.0.0
+      react: /@preact/compat@17.1.2(preact@10.16.0)
+      react-dom: /@preact/compat@17.1.2(preact@10.16.0)
+    dev: false
+
+  /@tanstack/virtual-core@3.0.0:
+    resolution: {integrity: sha512-SYXOBTjJb05rXa2vl55TTwO40A6wKu0R5i1qQwhJYNDIqaIGF7D0HsLw+pJAyi2OvntlEIVusx3xtbbgSUi6zg==}
     dev: false
 
   /@trysound/sax@0.2.0:
