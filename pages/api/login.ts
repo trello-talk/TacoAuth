@@ -3,7 +3,6 @@ import { sign } from 'jsonwebtoken';
 import { NextApiRequest, NextApiResponse } from 'next';
 import fetch from 'node-fetch';
 
-import { getAuthHeader } from '../../lib/oauth';
 import prisma from '../../lib/prisma';
 import { config } from '../../utils/config';
 import { DiscordUser, TrelloMember } from '../../utils/types';
@@ -76,12 +75,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (user.trelloID && user.trelloToken) {
     const params = new URLSearchParams({
-      fields: ['id', 'username', 'fullName', 'avatarUrl', 'initials', 'url'].join(',')
+      fields: ['id', 'username', 'fullName', 'avatarUrl', 'initials', 'url'].join(','),
+      key: process.env.TRELLO_KEY,
+      token: user.trelloToken
     });
 
-    trelloMember = await fetch(`https://api.trello.com/1/members/me/?${params.toString()}`, {
-      headers: { Authorization: await getAuthHeader(user.trelloToken, 'GET', 'https://api.trello.com/1/members/me') }
-    })
+    trelloMember = await fetch(`https://api.trello.com/1/members/me/?${params.toString()}`)
       .then((res) => res.json() as unknown as TrelloMember)
       .catch(() => null);
   }
