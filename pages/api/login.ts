@@ -3,10 +3,12 @@ import { sign } from 'jsonwebtoken';
 import { NextApiRequest, NextApiResponse } from 'next';
 import fetch from 'node-fetch';
 
+import { getAuthHeader } from '../../lib/oauth';
+import prisma from '../../lib/prisma';
 import { config } from '../../utils/config';
-import { DiscordUser } from '../../utils/types';
+import { DiscordUser, TrelloMember } from '../../utils/types';
 
-const scope = ['identify'].join(' ');
+const scope = ['identify', 'role_connections.write'].join(' ');
 const REDIRECT_URI = `${config.appUri}/api/login`;
 
 const OAUTH_QS = new URLSearchParams({
@@ -36,7 +38,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     scope
   }).toString();
 
-  const { access_token = null, token_type = 'Bearer' } = await fetch('https://discord.com/api/oauth2/token', {
+  const {
+    access_token = null,
+    refresh_token = null,
+    token_type = 'Bearer'
+  } = await fetch('https://discord.com/api/oauth2/token', {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'TacoAuth (https://github.com/trello-talk/TacoAuth, v1.0.0)' },
     method: 'POST',
     body
@@ -52,6 +58,52 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   }).then((res) => res.json() as Promise<DiscordUser | { unauthorized: true }>);
 
   if (!('id' in me)) return res.redirect(OAUTH_URI);
+
+  const user = await prisma.user.upsert({
+    where: { userID: me.id },
+    create: {
+      userID: me.id,
+      discordToken: access_token,
+      discordRefresh: refresh_token
+    },
+    update: {
+      discordToken: access_token,
+      discordRefresh: refresh_token
+    }
+  });
+
+  let trelloMember: TrelloMember | null = null;
+
+  if (user.trelloID && user.trelloToken) {
+    const params = new URLSearchParams({
+      fields: ['id', 'username', 'fullName', 'avatarUrl', 'initials', 'url'].join(',')
+    });
+
+    trelloMember = await fetch(`https://api.trello.com/1/members/me/?${params.toString()}`, {
+      headers: { Authorization: await getAuthHeader(user.trelloToken, 'GET', 'https://api.trello.com/1/members/me') }
+    })
+      .then((res) => res.json() as unknown as TrelloMember)
+      .catch(() => null);
+  }
+
+  const memberConnected = trelloMember && !!trelloMember.id && !!trelloMember.username;
+  await fetch(`https://discord.com/api/users/@me/applications/${config.clientId}/role-connection`, {
+    method: 'PUT',
+    headers: {
+      Authorization: `${token_type} ${access_token}`,
+      'User-Agent': 'TacoAuth (https://github.com/trello-talk/TacoAuth, v1.0.0)',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(
+      memberConnected
+        ? {
+            platform_name: 'Trello',
+            platform_username: trelloMember.username,
+            metadata: { connected: true }
+          }
+        : { metadata: { connected: false } }
+    )
+  });
 
   const token = sign(me, config.jwtSecret, { expiresIn: '7d' });
 

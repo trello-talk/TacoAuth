@@ -3,10 +3,8 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getAccessToken, getAuthHeader } from '../../../lib/oauth';
 import prisma from '../../../lib/prisma';
 import { parseUser } from '../../../utils';
+import { config as appConfig } from '../../../utils/config';
 import { TrelloMember } from '../../../utils/types';
-
-const TRELLO_BASE = 'https://api.trello.com/1';
-const TRELLO_MEMBER = '/members/me';
 
 export const config = {
   api: {
@@ -24,7 +22,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { token = null, verifier = null } = req.body;
   if (typeof token !== 'string' && typeof verifier !== 'string') return res.status(400).send({ error: 'Invalid body' });
 
-  const tokens = await getAccessToken(token, verifier, user.id).catch(null);
+  const tokens = await getAccessToken(token, verifier, user.id).catch(() => null);
   if (!tokens) return res.status(400).send({ error: 'Invalid token' });
 
   const params = new URLSearchParams({
@@ -32,14 +30,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   });
 
   const body: TrelloMember = await fetch(`https://api.trello.com/1/members/me/?${params.toString()}`, {
-    headers: { Authorization: await getAuthHeader(tokens.accessToken, 'GET', TRELLO_BASE + TRELLO_MEMBER) }
+    headers: { Authorization: await getAuthHeader(tokens.accessToken, 'GET', 'https://api.trello.com/1/members/me') }
   })
     .then((res) => res.json())
     .catch(() => null);
   if (!body) return res.status(400).send({ error: 'Invalid body was given by Trello...' });
   if (!body.id) return res.status(400).send({ error: 'A Trello user ID body was not given by Trello...' });
 
-  await prisma.user.upsert({
+  const dbUser = await prisma.user.upsert({
     where: { userID: user.id },
     create: {
       userID: user.id,
@@ -51,6 +49,21 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       trelloToken: tokens.accessToken
     }
   });
+
+  if (dbUser.discordToken)
+    await fetch(`https://discord.com/api/users/@me/applications/${appConfig.clientId}/role-connection`, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${dbUser.discordToken}`,
+        'User-Agent': 'TacoAuth (https://github.com/trello-talk/TacoAuth, v1.0.0)',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        platform_name: 'Trello',
+        platform_username: body.username,
+        metadata: { connected: true }
+      })
+    });
 
   console.info(`[${new Date().toISOString()}}] User ${user.username}#${user.discriminator} (${user.id}) authorized Trello account ${body.username}`);
 
