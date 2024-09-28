@@ -40,7 +40,7 @@ dependencies:
     version: 9.0.2
   next:
     specifier: 12.3.4
-    version: 12.3.4(@preact/compat@17.1.2)(@preact/compat@17.1.2)(sass@1.62.1)
+    version: 12.3.4(@preact/compat@17.1.2)(@preact/compat@17.1.2)(sass@1.79.4)
   next-plugin-preact:
     specifier: 3.0.7
     version: 3.0.7(@prefresh/babel-plugin@0.4.4)(next@12.3.4)(preact-render-to-string@5.2.6)(preact-ssr-prepass@1.2.1)(preact@10.16.0)(webpack@5.89.0)
@@ -72,8 +72,8 @@ dependencies:
     specifier: 1.4.0
     version: 1.4.0
   sass:
-    specifier: 1.62.1
-    version: 1.62.1
+    specifier: 1.79.4
+    version: 1.79.4
   tailwindcss:
     specifier: 3.3.6
     version: 3.3.6
@@ -437,7 +437,7 @@ packages:
       '@prefresh/core': 1.5.2(preact@10.16.0)
       '@prefresh/utils': 1.2.0
       '@prefresh/webpack': 4.0.0(@prefresh/babel-plugin@0.5.0)(preact@10.16.0)(webpack@5.89.0)
-      next: 12.3.4(@preact/compat@17.1.2)(@preact/compat@17.1.2)(sass@1.62.1)
+      next: 12.3.4(@preact/compat@17.1.2)(@preact/compat@17.1.2)(sass@1.79.4)
       preact: 10.16.0
       webpack: 5.89.0
     dev: false
@@ -1099,6 +1099,13 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.3
+    dev: false
+
+  /chokidar@4.0.1:
+    resolution: {integrity: sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA==}
+    engines: {node: '>= 14.16.0'}
+    dependencies:
+      readdirp: 4.0.1
     dev: false
 
   /chrome-trace-event@1.0.3:
@@ -2539,7 +2546,7 @@ packages:
       - webpack
     dev: false
 
-  /next@12.3.4(@preact/compat@17.1.2)(@preact/compat@17.1.2)(sass@1.62.1):
+  /next@12.3.4(@preact/compat@17.1.2)(@preact/compat@17.1.2)(sass@1.79.4):
     resolution: {integrity: sha512-VcyMJUtLZBGzLKo3oMxrEF0stxh8HwuW976pAzlHhI3t8qJ4SROjCrSh1T24bhrbjw55wfZXAbXPGwPt5FLRfQ==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -2563,7 +2570,7 @@ packages:
       postcss: 8.4.14
       react: /@preact/compat@17.1.2(preact@10.16.0)
       react-dom: /@preact/compat@17.1.2(preact@10.16.0)
-      sass: 1.62.1
+      sass: 1.79.4
       styled-jsx: 5.0.7(@preact/compat@17.1.2)
       use-sync-external-store: 1.2.0(@preact/compat@17.1.2)
     optionalDependencies:
@@ -3215,6 +3222,11 @@ packages:
       picomatch: 2.3.1
     dev: false
 
+  /readdirp@4.0.1:
+    resolution: {integrity: sha512-GkMg9uOTpIWWKbSsgwb5fA4EavTR+SG/PMPoAY8hkhHfEEY0/vqljY+XHqtDf2cr2IJtoNRDbrrEpZUiZCkYRw==}
+    engines: {node: '>= 14.16.0'}
+    dev: false
+
   /redis-errors@1.2.0:
     resolution: {integrity: sha512-1qny3OExCf0UvUV/5wpYKf2YwPcOqXzkwKKSmKHiE6ZMQs5heeE/c8eXK+PNllPvmjgAbfnsbpkGZWy8cBpn9w==}
     engines: {node: '>=4'}
@@ -3288,12 +3300,12 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /sass@1.62.1:
-    resolution: {integrity: sha512-NHpxIzN29MXvWiuswfc1W3I0N8SXBd8UR26WntmDlRYf0bSADnwnOjsyMZ3lMezSlArD33Vs3YFhp7dWvL770A==}
+  /sass@1.79.4:
+    resolution: {integrity: sha512-K0QDSNPXgyqO4GZq2HO5Q70TLxTH6cIT59RdoCHMivrC8rqzaTw5ab9prjz9KUN1El4FLXrBXJhik61JR4HcGg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
-      chokidar: 3.5.3
+      chokidar: 4.0.1
       immutable: 4.3.4
       source-map-js: 1.0.2
     dev: false
