@@ -27,8 +27,8 @@ dependencies:
     specifier: 1.2.1
     version: 1.2.1
   cookie:
-    specifier: 0.5.0
-    version: 0.5.0
+    specifier: 0.7.2
+    version: 0.7.2
   cssnano:
     specifier: 6.0.1
     version: 6.0.1(postcss@8.4.32)
@@ -80,8 +80,8 @@ dependencies:
 
 devDependencies:
   '@types/cookie':
-    specifier: 0.5.3
-    version: 0.5.3
+    specifier: 0.6.0
+    version: 0.6.0
   '@types/jsonwebtoken':
     specifier: 9.0.5
     version: 9.0.5
@@ -507,8 +507,8 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: false
 
-  /@types/cookie@0.5.3:
-    resolution: {integrity: sha512-SLg07AS9z1Ab2LU+QxzU8RCmzsja80ywjf/t5oqw+4NSH20gIGlhLOrBDm1L3PBWzPa4+wkgFQVZAjE6Ioj2ug==}
+  /@types/cookie@0.6.0:
+    resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
     dev: true
 
   /@types/eslint-scope@3.7.7:
@@ -1158,8 +1158,8 @@ packages:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
-  /cookie@0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
+  /cookie@0.7.2:
+    resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
     engines: {node: '>= 0.6'}
     dev: false
 
