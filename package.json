@@ -32,7 +32,7 @@
     "next-plugin-preact": "3.0.7",
     "node-fetch": "3.3.2",
     "oauth": "0.10.0",
-    "postcss": "8.4.32",
+    "postcss": "8.5.1",
     "preact": "10.16.0",
     "preact-render-to-string": "5.2.6",
     "react": "npm:@preact/compat",
